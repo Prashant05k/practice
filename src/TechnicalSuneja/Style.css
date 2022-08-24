@@ -1,0 +1,20 @@
+.demo1 {
+    color: aqua;
+}
+
+.demo2 {
+    color: rgb(255, 0, 132);
+}
+
+.demo3 {
+    font-size: 50px;
+}
+
+.demo4 {
+    color: rgb(138, 128, 160);
+}
+
+.failure {
+    font-size: 15px;
+    color: red
+}
