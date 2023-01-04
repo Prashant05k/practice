@@ -77,6 +77,17 @@ import Throttle from "./TechnicalSuneja/Throttle";
 import Flex from "./CSS/Flex";
 import { useState } from "react";
 import ReactBootstrap from "./reactBootstrap/ReactBootstrap";
+import MultipleAPIAxios from "./APICallls/MultipleAPIAxios";
+import MultipleAPIFetch from "./APICallls/MultipleAPIFetch";
+import Cleanup from "./Thapa/Cleanup";
+import ShortCircutEvaluation from "./Thapa/ShortCircutEvaluation";
+import FormValidation from "./Project/FormValidatationAndFetchData/FormValidation";
+import UpdateStateInRenderFun from "./UpdateStateInRender/UpdateStateInRenderFun";
+import UpdateStateInRenderClass from "./UpdateStateInRender/UpdateStateInRenderClass";
+import PassingMultiplePropsFun from "./TechnicalSuneja/PassingMultiplePropsFun";
+import PassingMultiplePropsClass from "./TechnicalSuneja/PassingMultiplePropsClass";
+import ForceUpdateFun from "./extraConcepts/ForceUpdateFun";
+import ForceUpdateClass from "./extraConcepts/ForceUpdateClass";
 
 function App() {
   const address = {
@@ -125,9 +136,9 @@ function App() {
         >
           {btn}
         </button>
-        <Link to="/deposit">Deposit</Link>
+        <Link to="/bank/deposit">Deposit</Link>
         <span> </span>
-        <Link to="/withdraw">Withdraw</Link>
+        <Link to="/bank/withdraw">Withdraw</Link>
         <span> </span>
         <Link to="/NotesApp">NotesApp</Link>
 
@@ -135,6 +146,9 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
 
           {/*%%%%%%%%%%%%%% Technical Suneja %%%%%%%%%%%%%%%%%%%%%%%%%%*/}
+
+          {/* <PassingMultiplePropsFun/> */}
+          {/* <PassingMultiplePropsClass/> */}
 
           {/* <FunctionalComponent name='Prashant' age={24} address={address}/> */}
 
@@ -146,28 +160,29 @@ function App() {
           {/* <CeventHandling age={24} array={arr}/> */}
 
           {/* <StyleSheet isValue={true}/>
-
-        <h5 className={StylesCss.success}>Success: module file is imported successfully</h5> */}
+          <h5 className={StylesCss.success}>Success: module file is imported successfully</h5> */}
 
           {/* <FormC/> */}
           {/* <FormF/> */}
-          {/*
-        <LifeCycleA/>
-        <LifeCycleD/>  */}
-          {/* LifeCycleA: constructor
-      bundle.js:218 LifeCycleA: getDerivedStateFromProps
-      bundle.js:227 LifeCycleA: render
-      bundle.js:302 LifeCycleB: Constructor
-      bundle.js:306 LifeCycleB: getDerivedStateFromProps
-      bundle.js:315 LifeCycleB: render
-      bundle.js:384 LifeCycleD: Constructor
-      bundle.js:388 LifeCycleD: getDerivedStateFromProps
-      bundle.js:397 LifeCycleD: render
-      bundle.js:311 LifeCycleB: componentDidMount
-      bundle.js:223 LifeCycleA: componentDidMount
-      bundle.js:393 LifeCycleD: componentDidMount */}
 
-          {/* <Product/> */}
+          {/*
+          <LifeCycleA/>
+          <LifeCycleD/>  */}
+
+          {/* LifeCycleA: constructor
+          bundle.js:218 LifeCycleA: getDerivedStateFromProps
+          bundle.js:227 LifeCycleA: render
+          bundle.js:302 LifeCycleB: Constructor
+          bundle.js:306 LifeCycleB: getDerivedStateFromProps
+          bundle.js:315 LifeCycleB: render
+          bundle.js:384 LifeCycleD: Constructor
+          bundle.js:388 LifeCycleD: getDerivedStateFromProps
+          bundle.js:397 LifeCycleD: render
+          bundle.js:311 LifeCycleB: componentDidMount
+          bundle.js:223 LifeCycleA: componentDidMount
+          bundle.js:393 LifeCycleD: componentDidMount */}
+
+          {/* </Product> */}
           {/* <Product1/> */}
 
           {/* <LifeCycleAF/> */}
@@ -184,17 +199,19 @@ function App() {
           {/* <FetchGetF/> */}
           {/* <FetchPostF/> */}
 
-          {/*
-         <CounterC />
-        <CounterF /> */}
+          {/* <MultipleAPIAxios/> */}
+          {/* <MultipleAPIFetch/> */}
+
+          {/* <CounterC /> */}
+          {/*<CounterF /> */}
 
           {/* <UseStateHookWithObject/> */}
           {/* <UseStateWithArray/> */}
 
           {/* <ComponentDidUpdate/> */}
           {/*
-         <XYClass/>
-        <XYfun/> */}
+          <XYClass/>
+          <XYfun/> */}
 
           {/* <ContextAPIA/> */}
           {/* <FA/> */}
@@ -203,11 +220,11 @@ function App() {
 
           {/* <AjayC /> */}
           {/* <SushantC />
-        <VikasC /> */}
+          <VikasC /> */}
 
           {/* <AjayF/>
-        <SushantF/>
-        <VikasF/> */}
+          <SushantF/>
+          <VikasF/> */}
 
           {/* <UseMemo/> */}
 
@@ -243,7 +260,7 @@ function App() {
 
           {/* <ErrorBoundary> 
           <ErrorBoundaryUser />
-        </ErrorBoundary>  */}
+          </ErrorBoundary>  */}
 
           {/* <PureComponentC/> */}
 
@@ -269,6 +286,20 @@ function App() {
           {/* <ShouldComponentUpdate/> */}
 
           {/* <UseReducer/> */}
+
+          {/*%%%%%%%%%%%%%% Technical Thapa %%%%%%%%%%%%%%%%%%%%%%%%%%*/}
+          {/* <Cleanup/> */}
+          {/* <ShortCircutEvaluation/> */}
+
+          {/*%%%%%%%%%%%%%% Interview Assignment %%%%%%%%%%%%%%%%%%%%%%%%%%*/}
+          {/* <FormValidation/> */}
+
+          {/*%%%%%%%%%%%%%% EXtra concepts %%%%%%%%%%%%%%%%%%%%%%%%%%*/}
+          {/* <UpdateStateInRenderFun/> */}
+          {/* <UpdateStateInRenderClass/> */}
+
+          {/* <ForceUpdateFun /> */}
+          {/* <ForceUpdateClass /> */}
         </header>
       </div>
     </>

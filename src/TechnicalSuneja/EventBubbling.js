@@ -3,55 +3,69 @@ import React, { useEffect } from "react";
 function EventBubbling() {
   useEffect(() => {
     var div = document.querySelector("div");
-    var button = document.querySelector("button");
+    var span = document.getElementById("span");
+    var button = document.getElementById("button");
 
     // Event Bubbling
-    div.addEventListener("click", () => {
-      console.log("Div");
-    });
+    // div.addEventListener("click", () => {
+    //   console.log("Div");
+    // });
 
-    button.addEventListener("click", () => {
-      console.log("Button");
-    });
+    // span.addEventListener("click", () => {
+    //   console.log("Span");
+    // });
+
+    // button.addEventListener("click", () => {
+    //   console.log("Button");
+    // });
 
     //Event Capturing
     // div.addEventListener('click', () => {
     //   console.log('div')
     // }, true)
+
+    // span.addEventListener('click', () => {
+    //   console.log('span')
+    // }, true)
+
     // button.addEventListener('click', () => {
     //     console.log('button')
     // }, true)
 
     // Stop Propogattion
+    div.addEventListener("click", () => {
+      console.log("Div");
+    });
+
+     span.addEventListener('click', () => {
+      console.log('span')
+    }, true)
+
+    button.addEventListener("click", (event) => {
+      // event.stopPropagation();
+      console.log("Button");
+    });
+
+    // Immediate Propogation
     // div.addEventListener("click", () => {
-    //   console.log("Div");
-    // });
+    //   console.log("Div")
+    // })
 
-  //   button.addEventListener("click", (event) => {
-  //     // event.stopPropagation();
-  //     console.log("Button");
-  //   });
+    // button.addEventListener("click", (event) => {
+    //     console.log("Button")
+    // })
 
-
-
-  //Immediate Propogation
-  // div.addEventListener("click", () => {
-  //   console.log("Div")
-  // })
-
-  // button.addEventListener("click", (event) => {
-  //     console.log("Button")
-  // })
-
-  // button.addEventListener("click", (event) => {
-  //     event.stopImmediatePropagation()
-  //     console.log("Button1")
-  // })
-});
+    // button.addEventListener("click", (event) => {
+    //     event.stopImmediatePropagation()
+    //     console.log("Button1")
+    // })
+  });
   return (
     <>
       <div>
-        <button>Button</button>
+        <span id="span">
+          <button id="button">Button</button>
+        </span>
       </div>
     </>
   );

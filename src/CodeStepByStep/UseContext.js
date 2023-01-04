@@ -1,63 +1,44 @@
-import React, { createContext, useContext } from 'react'
-const myContext = createContext()
+import React, { createContext, useContext } from "react";
+const myContext = createContext();
 
 export default function UseContext() {
-  return (<>
-    <div>UseContext</div>
-    <myContext.Provider value={{name: 'Prashant', age: 24}}>
+  return (
+    <>
+      <div>UseContext</div>
+      <myContext.Provider value={{ name: "Prashant", age: 24 }}>
         <Consumer1 />
+      </myContext.Provider>
+      <myContext.Provider value={{ name: "Akash", age: 22 }}>
         <Consumer2 />
-    </myContext.Provider>
-    </>)
-}
-
-
-function Consumer1(){
-    const receivedValue = useContext(myContext)
-    console.log(receivedValue)
-    return <>
-        <div>
-            My name is {receivedValue.name}.
-        </div>
+      </myContext.Provider>
     </>
+  );
 }
 
-function Consumer2(){
-    const receivedValue = useContext(myContext)
-    return <>
-        <div>
-            I am {receivedValue.age} years old.
-            {/* <div><myContext.Consumer>{({name, age}) => <h4>{name}, {age}</h4>}</myContext.Consumer></div> */}
-        </div>
+function Consumer1() {
+  const receivedValue = useContext(myContext);
+  console.log(receivedValue);
+  return (
+    <>
+      <div>
+        My name is {receivedValue.name}, {receivedValue.age}.
+      </div>
     </>
+  );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function Consumer2() {
+  const receivedValue = useContext(myContext);
+  console.log(receivedValue);
+  return (
+    <>
+      <div>
+        I am {receivedValue.name},{receivedValue.age} years old.
+        {/* <div><myContext.Consumer>{({name, age}) => <h4>{name}, {age}</h4>}</myContext.Consumer></div> */}
+      </div>
+    </>
+  );
+}
 
 // import React, { useContext } from "react";
 
@@ -71,9 +52,9 @@ function Consumer2(){
 //       background: "#222222"
 //     }
 //   };
-  
+
 //   const ThemeContext = React.createContext();
-  
+
 //   export default function UseContext() {
 //     return (
 //       <ThemeContext.Provider value={themes.dark}>
@@ -81,7 +62,7 @@ function Consumer2(){
 //       </ThemeContext.Provider>
 //     );
 //   }
-  
+
 //   function Toolbar(props) {
 //     return (
 //       <div>
@@ -89,14 +70,12 @@ function Consumer2(){
 //       </div>
 //     );
 //   }
-  
+
 //   function ThemedButton() {
-//     const theme = useContext(ThemeContext); 
+//     const theme = useContext(ThemeContext);
 //     return (
 //       <button style={{ background: theme.background, color: theme.foreground }}>
 //         I am styled by theme context!
 //       </button>
 //     );
 //   }
-
-  

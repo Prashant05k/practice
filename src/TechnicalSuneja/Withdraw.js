@@ -13,7 +13,7 @@ function Withdraw() {
       </div>
       <Link to="/">Home</Link>
       <br></br>
-      <Link to="/deposit">Deposit</Link>
+      <Link to="/bank/deposit">Deposit</Link>
     </>
   );
 }

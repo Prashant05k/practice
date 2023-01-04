@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import App from "./App";
 import ProjectStart from "./Project/ProjectStart";
 import Deposit from "./TechnicalSuneja/Deposit";
@@ -23,23 +23,27 @@ export default function Router() {
         {/* <Route path="/" element={isLoggedIn ? <App /> : null} /> */}
         <Route path="/" element={<App />} />
 
-        <Route
-          path="/deposit"
-          element={
-            <Protected isLoggedIn={isLoggedIn}>
-              <Deposit />
-            </Protected>
-          }
-        />
-        <Route
-          path="/withdraw"
-          element={
-            <Protected isLoggedIn={isLoggedIn}>
-              <Withdraw />
-            </Protected>
-          }
-        />
+        <Route path="/bank" element={<div><h2>Bank App</h2><Outlet/></div>}>
+          <Route
+            path="deposit"
+            element={
+              <Protected isLoggedIn={isLoggedIn}>
+                <Deposit />
+              </Protected>
+            }
+          />
+          <Route
+            path="withdraw"
+            element={
+              <Protected isLoggedIn={isLoggedIn}>
+                <Withdraw />
+              </Protected>
+            }
+          />
+        </Route>
+
         <Route path="/NotesApp" element={<ProjectStart />} />
+        <Route path="*" element={<h1>Error Page!</h1>} />
       </Routes>
     </div>
   );

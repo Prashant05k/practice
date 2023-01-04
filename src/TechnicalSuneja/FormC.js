@@ -5,24 +5,25 @@ export default class FormC extends Component {
     super(props);
 
     this.state = {
-      username: 'd', address: 'd'
+      username: "d",
+      address: "d",
     };
   }
-  
+
   handleUsername = (e) => {
     // console.log(e.target.value)
-    this.setState({username: e.target.value})
+    this.setState({ username: e.target.value });
   };
 
   handleAddress = (e) => {
-    this.setState({address: e.target.value})
+    this.setState({ address: e.target.value });
   };
 
   handleSubmit = (e) => {
-    const {username, address} = this.state
-    e.preventDefault()
+    const { username, address } = this.state;
+    e.preventDefault();
     console.log(this.state.username, this.state.address);
-    alert(`${username} ${address}`)
+    alert(`${username} ${address}`);
   };
   render() {
     return (

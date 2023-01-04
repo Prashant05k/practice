@@ -4,6 +4,9 @@ import {useSelector} from 'react-redux'
 function NavBar() {
   const balance = useSelector(state => state.amount)
   const count = useSelector(state => state.count)
+
+  // console.log('state')
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">

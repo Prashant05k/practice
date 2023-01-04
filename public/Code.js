@@ -1,9 +1,6 @@
-let str = "abc";
-
-function permutations(str) {
- for(let i=0; i<str.length; i++){
-    
- }
-}
-const res = permutations(str);
-console.log(res, res.length);
+// let i = 0;
+// let timer;
+// timer = setInterval(() => console.log(++i), 1000);
+// setTimeout(() => {
+//   clearInterval(timer);
+// }, 5000);

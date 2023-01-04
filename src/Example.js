@@ -1,20 +1,21 @@
-import React from 'react'
-
 function Example() {
-  return (<>
-    <div>Example</div>
-  </>)
+  return (
+    <>
+      <div>Example</div>
+    </>
+  );
 }
 
-export default Example
+export default Example;
 
-// class Example extends React.Component{
-//   render(){
-//     return (<>
-//       <div>Example</div>
-//     </>)
+// import React, { Component } from "react";
+
+// export class Example extends Component {
+//   reRender = () => {};
+
+//   render() {
+//     return <div>Example</div>;
 //   }
 // }
 
 // export default Example;
-
